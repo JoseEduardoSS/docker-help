@@ -1,0 +1,3 @@
+DOCKER RUN -> executa o devido container.
+DOCKER PS -> exibe containers em execução.
+DOCKER PS -A -> exibe containers que estão em execução e também os que não estão.
