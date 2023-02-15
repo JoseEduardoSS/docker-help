@@ -1,3 +1,16 @@
 DOCKER RUN -> executa o devido container.
+
+## UM CONTAINER PRECISA ESTAR COM UM PROCESSO ATIVO PARA SE MANTER *VIVO* ##
+
 DOCKER PS -> exibe containers em execução.
 DOCKER PS -A -> exibe containers que estão em execução e também os que não estão.
+
+DOCKER STOP [container id] -> para o processo do container.
+DOCKER START [container id] -> volta a executar container que estava parado.
+DOCKER PAUSE [container id] -> pausa o processo do container.
+DOCKER UNPAUSE [container id] -> despausa o processo do container.
+
+DOCKER EXEC -IT [container id] [command] -> executa um comando no container de forma interativa.
+DOCKER RUN -IT [container] [command] -> executa o container já rodando um comando de forma interativa.
+
+DOCKER RM [container id] -> remove container.
