@@ -1,16 +1,22 @@
-DOCKER RUN -> cria e executa o devido container.
+docker run [container] -> cria e executa o devido container.
+docker run -d [container] -> cria e executa o devido container e o mantém ativo em background.
+
+docker run -d -P [container] -> cria um localhost do container fora da instância do container.
+docker run -d -p [local port]:[container port] [container] -> cria um localhost do container fora da instância do container mapeando manualmente uma referência de porta.
 
 ## UM CONTAINER PRECISA ESTAR COM UM PROCESSO ATIVO PARA SE MANTER *VIVO* ##
 
-DOCKER PS -> exibe containers em execução.
-DOCKER PS -A -> exibe containers que estão em execução e também os que não estão.
+docker ps -> exibe containers em execução.
+docker ps -a -> exibe containers que estão em execução e também os que não estão.
 
-DOCKER STOP [container id] -> para o processo do container.
-DOCKER START [container id] -> volta a executar container que estava parado.
-DOCKER PAUSE [container id] -> pausa o processo do container.
-DOCKER UNPAUSE [container id] -> despausa o processo do container.
+docker stop [container id] -> para o processo do container.
+docker start [container id] -> volta a executar container que estava parado.
+docker pause [container id] -> pausa o processo do container.
+docker unpause [container id] -> despausa o processo do container.
 
-DOCKER EXEC -IT [container id] [command] -> executa um comando no container, que já existe, de forma interativa.
-DOCKER RUN -IT [container] [command] -> cria e executa o container já rodando um comando de forma interativa.
+docker exec -it [container id] [command] -> executa um comando no container, que já existe, de forma interativa.
+docker run -it [container] [command] -> cria e executa o container já rodando um comando de forma interativa.
 
-DOCKER RM [container id] -> remove container.
+docker rm [container id] -> remove container.
+
+docker port [container id] -> descreve o mapeamento de portas do container
