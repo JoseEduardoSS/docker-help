@@ -19,4 +19,10 @@ docker run -it [container] [command] -> cria e executa o container já rodando u
 
 docker rm [container id] -> remove container.
 
-docker port [container id] -> descreve o mapeamento de portas do container
+docker port [container id] -> descreve o mapeamento de portas do container.
+
+docker images -> descreve todas as imagens armazenadas no sistema.
+docker inspect [imagem id] -> detalha as informações sobre a imagem.
+docker history [imagem id] -> descreve o histórico de camadas da imagem.
+
+docker build -t [nome definido para a imagem] - Irá buildar uma imagem com base no arquivo Dockerfile no direitorio.
