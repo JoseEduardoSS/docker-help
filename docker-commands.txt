@@ -31,6 +31,8 @@ docker build -t [nome definido para a imagem] -> Irá buildar uma imagem com bas
 
 docker stop $(docker container ls -q) -> irá interromper os processos de todos os containers ativos. $( ) permite passar um comando docker dentro de outro comando docker, nesse caso ele ira listar os IDs de todos os containers para o docker stop.
 
+docker container rm $(docker container ls -aq) -> irá remover todos os containers, tanto os em execução quanto os que não estão. 
+
 docker login -u [usuario] -> comando para fazer login no docker hub.
 
 docker push [nome definido da imagem] -> da push da imagem no repositorio 
