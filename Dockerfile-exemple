@@ -1,0 +1,5 @@
+FROM node:14 ## o comando FROM define a imagem base que será utilizada para a crianção de uma nova imagem.
+WORKDIR /app-node ## define o diretorio padrao da imagem.
+COPY . . ## copia tudo do direitorio atual para um direitorio dentro do container.
+RUN npm install ## executa o comando dentro do direitorio padrao do containes.
+ENTRYPOINT npm start ## define o comando de entrada no container.
