@@ -25,6 +25,12 @@ docker images -> descreve todas as imagens armazenadas no sistema.
 docker inspect [imagem id] -> detalha as informações sobre a imagem.
 docker history [imagem id] -> descreve o histórico de camadas da imagem.
 
+docker tag [nome definido da imagem] [nome da nova imagem] -> clona a imagem em questão.
+
 docker build -t [nome definido para a imagem] -> Irá buildar uma imagem com base no arquivo Dockerfile no direitorio.
 
 docker stop $(docker container ls -q) -> irá interromper os processos de todos os containers ativos. $( ) permite passar um comando docker dentro de outro comando docker, nesse caso ele ira listar os IDs de todos os containers para o docker stop.
+
+docker login -u [usuario] -> comando para fazer login no docker hub.
+
+docker push [nome definido da imagem] -> da push da imagem no repositorio 
