@@ -24,6 +24,7 @@ docker port [container id] -> descreve o mapeamento de portas do container.
 docker images -> descreve todas as imagens armazenadas no sistema.
 docker inspect [imagem id] -> detalha as informações sobre a imagem.
 docker history [imagem id] -> descreve o histórico de camadas da imagem.
+docker rmi [imagem id] -> remove a imagem.
 
 docker tag [nome definido da imagem] [nome da nova imagem] -> clona a imagem em questão.
 
@@ -34,5 +35,7 @@ docker stop $(docker container ls -q) -> irá interromper os processos de todos 
 docker container rm $(docker container ls -aq) -> irá remover todos os containers, tanto os em execução quanto os que não estão. 
 
 docker login -u [usuario] -> comando para fazer login no docker hub.
-
 docker push [nome definido da imagem] -> da push da imagem no repositorio 
+
+docker run -it -v [diretório] [container] [comando] -> comando "-v" irá definar um diretório de volume para persistencia de dados.
+docker run -it --mount type=[mount type],source=[diretório],target=[local dentro do container] [container] [comando] -> comando "--mount" irá definar um diretório de volume do tipo mount para persistencia de dados.
