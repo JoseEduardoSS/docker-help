@@ -16,6 +16,8 @@ docker start [container id] -> volta a executar container que estava parado.
 docker pause [container id] -> pausa o processo do container.
 docker unpause [container id] -> despausa o processo do container.
 
+docker inspect [container id] -> detalha as informações sobre ocontainer.
+
 docker exec -it [container id] [command] -> executa um comando no container, que já existe, de forma interativa.
 docker run -it [container] [command] -> cria e executa o container já rodando um comando de forma interativa.
 
@@ -43,5 +45,19 @@ docker push [nome definido da imagem] -> da push da imagem no repositorio
 
 ## VOLUMES ##
 
-docker run -it -v [diretório] [container] [comando] -> comando "-v" irá definar um diretório de volume para persistencia de dados.
+docker run -it -v [diretório]:[local dentro do container] [container] [comando] -> comando "-v" irá definar um diretório de volume para persistencia de dados.
+
 docker run -it --mount type=[mount type],source=[diretório],target=[local dentro do container] [container] [comando] -> comando "--mount" irá definar um diretório de volume do tipo mount para persistencia de dados.
+
+docker run -it --mount source=[meu volume],target=[local dentro do container] [container] [comando] -> quando o "--mount" for usado com a ausencia de um type definido ele irá definiar o tipo com "volume" e criara uma volume com o nome passado no "source".
+
+docker volume ls -> lista os volumes no sistema.
+docker volume create [nome do volume] -> cria um volume no sistema.
+
+docker run -it -v [nome do volume]:[local dentro do container] [container] [comando] -> comando "-v" irá definar um diretório de volume para persistencia de dados.
+
+## NETWORKS ##
+
+docker network ls -> lista as redes disponiveis.
+
+
