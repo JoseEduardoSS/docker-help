@@ -20,6 +20,8 @@ docker inspect [container id] -> detalha as informações sobre ocontainer.
 
 docker exec -it [container id] [command] -> executa um comando no container, que já existe, de forma interativa.
 docker run -it [container] [command] -> cria e executa o container já rodando um comando de forma interativa.
+docker run -it --name [nome que será dado ao container] [nome da imagem] [comando] -> o comando "--name" irá definir um nome desejado para o container. 
+docker run -it --network [nome da rede] [nome da imagem] [comando] -> o comando "--network" irá definir uma rede desejada para o container. 
 
 docker rm [container id] -> remove container.
 
@@ -27,7 +29,7 @@ docker port [container id] -> descreve o mapeamento de portas do container.
 
 docker stop $(docker container ls -q) -> irá interromper os processos de todos os containers ativos. $( ) permite passar um comando docker dentro de outro comando docker, nesse caso ele ira listar os IDs de todos os containers para o docker stop.
 
-docker container rm $(docker container ls -aq) -> irá remover todos os containers, tanto os em execução quanto os que não estão. 
+docker container rm $(docker ps -aq) -> irá remover todos os containers, tanto os em execução quanto os que não estão. 
 
 ## IMAGENS ##
 
@@ -60,4 +62,4 @@ docker run -it -v [nome do volume]:[local dentro do container] [container] [coma
 
 docker network ls -> lista as redes disponiveis.
 
-
+docker network create --driver bridge [nome da rede] -> irá criar uma rede do tipo bridge.
