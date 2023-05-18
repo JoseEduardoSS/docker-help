@@ -41,6 +41,7 @@ docker rmi [imagem id] -> remove a imagem.
 docker tag [nome definido da imagem] [nome da nova imagem] -> clona a imagem em questão.
 
 docker build -t [nome definido para a imagem] -> Irá buildar uma imagem com base no arquivo Dockerfile no direitorio.
+docker-compose build ->  o Docker Compose irá analisar o arquivo docker-compose.yml, encontrar as definições de serviço que incluem as instruções de construção e em seguida, executar o processo de construção para cada serviço.
 
 docker login -u [usuario] -> comando para fazer login no docker hub.
 docker push [nome definido da imagem] -> da push da imagem no repositorio 
